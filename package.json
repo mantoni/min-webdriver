@@ -1,0 +1,27 @@
+{
+  "name"            : "min-wd",
+  "version"         : "0.1.0",
+  "description"     : "Minimal WebDriver that pipes stdin to browsers",
+  "keywords"        : ["webdriver", "stdin", "browser", "tests"],
+  "author"          : "Maximilian Antoni (http://maxantoni.de)",
+  "homepage"        : "https://github.com/mantoni/min-webdriver",
+  "main"            : "./lib/driver.js",
+  "browser"         : "./lib/client.js",
+  "bin"             : {
+    "min-wd"        : "bin/cmd.js"
+  },
+  "scripts"         : {
+    "test"          : "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository"      : {
+    "type"          : "git",
+    "url"           : "https://github.com/mantoni/min-webdriver.git"
+  },
+  "dependencies"    : {
+    "through"       : "~2.3.4",
+    "listen"        : "~1.0.0",
+    "brout"         : "~0.1.0"
+  },
+  "files"           : ["bin", "lib", "README.md", "LICENSE"],
+  "license"         : "MIT"
+}
