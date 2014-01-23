@@ -11,7 +11,7 @@
     "min-wd"        : "bin/cmd.js"
   },
   "scripts"         : {
-    "test"          : "echo \"Error: no test specified\" && exit 1"
+    "test"          : "jslint --color ./lib/*.js"
   },
   "repository"      : {
     "type"          : "git",
@@ -21,6 +21,9 @@
     "through"       : "~2.3.4",
     "listen"        : "~1.0.0",
     "brout"         : "~0.1.0"
+  },
+  "devDependencies" : {
+    "jslint"        : "~0.2.6"
   },
   "files"           : ["bin", "lib", "README.md", "LICENSE"],
   "license"         : "MIT"
