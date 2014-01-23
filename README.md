@@ -39,7 +39,7 @@ process.exit(0);
 Use with [browserify][]:
 
 ```
-$ browserify ./node_modules/min-wd my-script.js | min-wd
+$ browserify -t min-wd my-script.js | min-wd
 = internet explorer 9 ========================================================
 Hello browser!
 = chrome * ===================================================================
@@ -49,7 +49,7 @@ Hello browser!
 Testing with [Mocha][] requires [mocaccino][]:
 
 ```
-$ browserify ./node_modules/min-wd my-test.js | mocaccino -b -r list | min-wd
+$ browserify -t min-wd my-test.js | mocaccino -b -r list | min-wd
 ```
 
 ## License
