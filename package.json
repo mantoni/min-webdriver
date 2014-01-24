@@ -1,6 +1,6 @@
 {
   "name"            : "min-wd",
-  "version"         : "0.1.0",
+  "version"         : "0.2.0",
   "description"     : "Minimal WebDriver that pipes stdin to browsers",
   "keywords"        : ["webdriver", "stdin", "browser", "tests", "browserify", "browserify-transform"],
   "author"          : "Maximilian Antoni (http://maxantoni.de)",
