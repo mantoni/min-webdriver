@@ -79,7 +79,7 @@ Here is a minimal node server that does the job:
 var http = require('http');
 
 http.createServer(function (req, res) {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.writeHead(200, { 'Content-Type': 'text/html; charset=UTF-8' });
   res.end('<!DOCTYPE html><html><head><meta encoding="utf-8"></head>'
     + '<body></body></html>');
 }).listen(4445);
