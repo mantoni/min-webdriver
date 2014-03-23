@@ -34,7 +34,10 @@ Put a config file name `.min-wd` in your project directory:
 }
 ```
 
-Assume `my-script.js` contains this:
+Alternatively, add a `webdriver` property with the configs to your
+`package.json` file.
+
+Assuming `my-script.js` contains this:
 
 ```js
 console.log('Hello %s!', 'browser');
