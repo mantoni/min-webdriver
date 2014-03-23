@@ -11,7 +11,7 @@
     "min-wd"        : "bin/cmd.js"
   },
   "scripts"         : {
-    "test"          : "jslint --color ./lib/*.js"
+    "test"          : "jslint --color './**/*.js'"
   },
   "repository"      : {
     "type"          : "git",
@@ -23,7 +23,7 @@
     "brout"         : "~0.1.2"
   },
   "devDependencies" : {
-    "jslint"        : "~0.2.6"
+    "jslint"        : "~0.3.1"
   },
   "files"           : ["bin", "lib", "README.md", "LICENSE"],
   "license"         : "MIT"
