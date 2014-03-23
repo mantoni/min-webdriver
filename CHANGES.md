@@ -1,5 +1,10 @@
 # Changes
 
+## 0.4.0
+
+- SauceLabs support
+- Load options from package.json
+
 ## 0.3.0
 
 - Support for custom start URL
