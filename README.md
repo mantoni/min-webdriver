@@ -54,7 +54,7 @@ Hello browser!
 Hello browser!
 ```
 
-### SauceLabs
+## SauceLabs
 
 Export your SauceLabs credentials:
 
@@ -72,7 +72,7 @@ Enable SauceLabs in your `.min-wd` file:
 }
 ```
 
-### Loading a web page
+## Loading a web page
 
 By default, min-webdriver will folk a new browser and inject the given script
 straight away without loading any web page. If you want to run your test cases
@@ -85,7 +85,7 @@ file:
 }
 ```
 
-### Mocha Support
+## Mocha Support
 
 Testing with [Mocha][] requires [mocaccino][]:
 
@@ -95,7 +95,7 @@ $ browserify -t min-wd my-test.js | mocaccino -b -r list | min-wd
 
 If this is your use case, make sure to give [Mochify][] a try.
 
-### IE trouble shooting
+## IE trouble shooting
 
 If IE reports it can't find `JSON`, then the Selenium default page makes IE
 switch to quirks mode. To avoid this, load a web page as described above.
