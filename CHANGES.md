@@ -1,5 +1,12 @@
 # Changes
 
+## 0.4.2
+
+- Load a url for a specific browser (for IE 9 doctype workaround)
+- Configure timeout for log polling
+- Improved log flushing
+- Improved http error handling for 302 / 303 responses
+
 ## 0.4.1
 
 - Stream browser output instead of buffering per browser. Prints logs from
