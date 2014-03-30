@@ -95,6 +95,16 @@ $ browserify -t min-wd my-test.js | mocaccino -b -r list | min-wd
 
 If this is your use case, make sure to give [Mochify][] a try.
 
+## Timeouts
+
+The default timeout for the log polling script is 10 seconds. If you have long
+running test cases that don't print anything for more than 10 seconds, you can
+increase the timeout by adding a `timeout` property to your config:
+
+```
+"timeout": 20000
+```
+
 ## IE trouble shooting
 
 If IE reports it can't find `JSON`, then the Selenium default page makes IE
