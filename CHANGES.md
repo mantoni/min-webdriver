@@ -1,5 +1,9 @@
 # Changes
 
+## 0.4.3
+
+- Set timeout to `0` to skip setting a log polling timeout
+
 ## 0.4.2
 
 - Load a url for a specific browser (for IE 9 doctype workaround)
