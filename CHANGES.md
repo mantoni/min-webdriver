@@ -1,5 +1,10 @@
 # Changes
 
+## 0.4.1
+
+- Stream browser output instead of buffering per browser. Prints logs from
+  first browser in the queue as they arrive, buffering up the other ones.
+
 ## 0.4.0
 
 - SauceLabs support
