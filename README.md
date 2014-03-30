@@ -107,19 +107,23 @@ increase the timeout by adding a `timeout` property to your config:
 
 ## IE trouble shooting
 
-If IE reports it can't find `JSON`, then the Selenium default page makes IE
-switch to quirks mode. To avoid this, load a web page as described above.
+If IE 9 reports it can't find `JSON`, then the Selenium default page makes IE
+switch to quirks mode. Work around this by loading a simple web page for IE:
 
-Here is a minimal node server that does the job:
+```
+{
+  "browsers": [{
+    "name": "Internet Explorer",
+    "version": "9",
+    "url": "http://my-server/doctype.html"
+  }]
+}
+```
 
-```js
-var http = require('http');
+With this content in the `doctype.html`:
 
-http.createServer(function (req, res) {
-  res.writeHead(200, { 'Content-Type': 'text/html; charset=UTF-8' });
-  res.end('<!DOCTYPE html><html><head><meta encoding="utf-8"></head>'
-    + '<body></body></html>');
-}).listen(4445);
+```html
+<!DOCTYPE html><html><head><meta encoding="utf-8"></head><body></body></html>
 ```
 
 ## License
