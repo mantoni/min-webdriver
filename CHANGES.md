@@ -1,5 +1,9 @@
 # Changes
 
+## 0.4.4
+
+- Bump brout
+
 ## 0.4.3
 
 - Set timeout to `0` to skip setting a log polling timeout
