@@ -26,9 +26,9 @@
     "url": "https://github.com/mantoni/min-webdriver.git"
   },
   "dependencies": {
-    "through": "~2.3.4",
-    "listen": "~1.0.0",
-    "brout": "~0.1.2"
+    "through": "^2.3.4",
+    "listen": "^1.0.0",
+    "brout": "~0.2.0"
   },
   "devDependencies": {
     "jslint": "~0.3.1"
