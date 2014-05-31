@@ -1,5 +1,10 @@
 # Changes
 
+## 0.4.5
+
+- Only inject `require` into `.js` files
+- Attempt to parse error message from Selenium WebDriver server
+
 ## 0.4.4
 
 - Bump brout
