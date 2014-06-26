@@ -105,10 +105,12 @@ increase the timeout by adding a `timeout` property to your config:
 "timeout": 20000
 ```
 
-## IE trouble shooting
+## Known issues and solutions
 
-If IE 9 reports it can't find `JSON`, then the Selenium default page makes IE
-switch to quirks mode. Work around this by loading a simple web page for IE:
+`min-webdriver` injects your script directly into the default page launched by
+the Selenium driver. In some cases browsers behave strangely in this context.
+Work around this by specifying a URL to a simple web page that is loaded before
+running the tests:
 
 ```
 {
@@ -125,6 +127,16 @@ With this content in the `doctype.html`:
 ```html
 <!DOCTYPE html><html><head><meta encoding="utf-8"></head><body></body></html>
 ```
+
+You can also specify a `"url"` for all browser on the root level.
+
+Loading a page before injecting the scripts is solving these issues:
+
+- IE 9 reporting it can't find `JSON` because the Selenium default page makes
+  IE switch to quirks mode
+- Error: `SECURITY_ERR: DOM Exception 18` because setting cookies is not
+  allowed for `file://` URLs
+- Error: `access to the Indexed Database API is denied in this context`
 
 ## License
 
