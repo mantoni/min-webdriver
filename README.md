@@ -90,7 +90,7 @@ file:
 Testing with [Mocha][] requires [mocaccino][]:
 
 ```
-$ browserify -t min-wd my-test.js | mocaccino -b -r list | min-wd
+$ browserify -t min-wd -p mocaccino my-test.js | min-wd
 ```
 
 If this is your use case, make sure to give [Mochify][] a try.
