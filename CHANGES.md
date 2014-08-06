@@ -1,5 +1,9 @@
 # Changes
 
+## 1.0.0
+
+- Use brout 1.0
+
 ## 0.4.5
 
 - Only inject `require` into `.js` files
