@@ -19,19 +19,19 @@
     "min-wd": "bin/cmd.js"
   },
   "scripts": {
-    "test": "jslint --color './**/*.js'"
+    "test": "jslint --color \"**/*.js\""
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/mantoni/min-webdriver.git"
   },
   "dependencies": {
-    "through": "^2.3.4",
-    "listen": "^1.0.0",
-    "brout": "~0.2.0"
+    "through": "^2.3",
+    "listen": "^1.0",
+    "brout": "^1.0"
   },
   "devDependencies": {
-    "jslint": "~0.3.1"
+    "jslint": "^0.6"
   },
   "files": [
     "bin",
