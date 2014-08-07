@@ -13,7 +13,7 @@
   ],
   "author": "Maximilian Antoni (http://maxantoni.de)",
   "homepage": "https://github.com/mantoni/min-webdriver",
-  "main": "./lib/transform.js",
+  "main": "./lib/plugin.js",
   "browser": "./lib/client.js",
   "bin": {
     "min-wd": "bin/cmd.js"
