@@ -14,7 +14,7 @@ Repository: <https://github.com/mantoni/min-webdriver>
 ## Install with npm
 
 ```
-npm install min-wd -g
+npm install min-wd
 ```
 
 ## Usage
@@ -47,7 +47,7 @@ process.exit(0);
 Use with [browserify][]:
 
 ```
-$ browserify -t min-wd my-script.js | min-wd
+$ browserify -p min-wd my-script.js
 = internet explorer 9 ========================================================
 Hello browser!
 = chrome * ===================================================================
@@ -90,7 +90,7 @@ file:
 Testing with [Mocha][] requires [mocaccino][]:
 
 ```
-$ browserify -t min-wd -p mocaccino my-test.js | min-wd
+$ browserify -p mocaccino -p min-wd my-test.js
 ```
 
 If this is your use case, make sure to give [Mochify][] a try.
