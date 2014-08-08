@@ -1,5 +1,9 @@
 # Changes
 
+## 2.0.2
+
+- Pipe output to stdout again
+
 ## 2.0.1
 
 - Remove brout again
