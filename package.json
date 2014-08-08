@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "through": "^2.3",
+    "resolve": "^0.7",
     "listen": "^1.0",
     "brout": "^1.0"
   },
