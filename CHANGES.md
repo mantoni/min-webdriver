@@ -1,5 +1,9 @@
 # Changes
 
+## 2.0.0
+
+- Convert from transform into plugin
+
 ## 1.0.0
 
 - Use brout 1.0
