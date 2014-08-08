@@ -1,5 +1,9 @@
 # Changes
 
+## 2.0.1
+
+- Remove brout again
+
 ## 2.0.0
 
 - Convert from transform into plugin
