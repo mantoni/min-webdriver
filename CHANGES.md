@@ -1,5 +1,9 @@
 # Changes
 
+## 2.1.0
+
+- Map stack traces to original sources using inline source maps
+
 ## 2.0.2
 
 - Pipe output to stdout again
