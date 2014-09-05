@@ -1,5 +1,9 @@
 # Changes
 
+## 2.1.1
+
+- Log error output to `context.out` instead of `process.stderr`
+
 ## 2.1.0
 
 - Map stack traces to original sources using inline source maps
