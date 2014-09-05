@@ -1,10 +1,14 @@
 # Minimal WebDriver
 
-Pipes stdin to all configured browsers using the Selenium
-[WebDriver protocol][].
+[![Build Status]](https://travis-ci.org/mantoni/min-webdriver)
+[![SemVer]](http://semver.org)
+[![License]](https://github.com/mantoni/min-webdriver/blob/master/LICENSE)
 
-- Concurrent test runs
+Pipe scripts to browsers using the Selenium [WebDriver protocol][].
+
 - SauceLabs support
+- Selenium Server 2 support
+- Concurrent test runs
 - No web server required
 
 Repository: <https://github.com/mantoni/min-webdriver>
@@ -138,10 +142,18 @@ Loading a page before injecting the scripts is solving these issues:
   allowed for `file://` URLs
 - Error: `access to the Indexed Database API is denied in this context`
 
+## Compatibility
+
+- Node 0.10 or later
+- Selenium Server 2.39 or later
+
 ## License
 
 MIT
 
+[Build Status]: http://img.shields.io/travis/mantoni/min-webdriver.svg
+[SemVer]: http://img.shields.io/:semver-%E2%9C%93-brightgreen.svg
+[License]: http://img.shields.io/npm/l/min-wd.svg
 [WebDriver protocol]: https://code.google.com/p/selenium/wiki/JsonWireProtocol
 [browserify]: http://browserify.org
 [Mocha]: http://visionmedia.github.io/mocha/
