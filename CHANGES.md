@@ -1,5 +1,9 @@
 # Changes
 
+## 2.2.0
+
+- Bump resolve and source-mapper to ^1.0
+
 ## 2.1.1
 
 - Log error output to `context.out` instead of `process.stderr`
