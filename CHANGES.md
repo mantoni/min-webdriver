@@ -1,5 +1,10 @@
 # Changes
 
+## 2.2.1
+
+- Wait for queue drain before continue polling
+- Don't end queue twice
+
 ## 2.2.0
 
 - Bump resolve and source-mapper to ^1.0
