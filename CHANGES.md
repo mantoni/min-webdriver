@@ -1,5 +1,9 @@
 # Changes
 
+## 2.2.2
+
+- Print browser names with leading '#'
+
 ## 2.2.1
 
 - Wait for queue drain before continue polling
