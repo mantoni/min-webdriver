@@ -11,11 +11,7 @@ Pipe scripts to browsers using the Selenium [WebDriver protocol][].
 - Concurrent test runs
 - No web server required
 
-Repository: <https://github.com/mantoni/min-webdriver>
-
----
-
-## Install with npm
+## Install
 
 ```
 npm install min-wd
@@ -52,9 +48,9 @@ Use with [browserify][]:
 
 ```
 $ browserify -p min-wd my-script.js
-= internet explorer 9 ========================================================
+# internet explorer 9:
 Hello browser!
-= chrome * ===================================================================
+# chrome *:
 Hello browser!
 ```
 
@@ -108,6 +104,34 @@ increase the timeout by adding a `timeout` property to your config:
 ```
 "timeout": 20000
 ```
+
+## API
+
+Use min-wd programatically with browserify like this:
+
+```
+var browserify = require('browserify');
+var minWd = require('min-wd');
+
+var b = browserify();
+b.plugin(minWd, { timeout : 0 });
+```
+
+### Supported options
+
+- `sauceLabs` whether to run tests with `saucelabs`. Defaults to `false`.
+- `hostname` the host to connect to. Defaults to `localhost`. If `sauceLabs` is
+  `true`, `ondemand.saucelabs.com` is used.
+- `port` the port to connect to. Defaults to `4444`. If `sauceLabs` is `true`,
+  `80` is used.
+- `timeout` if a script does not respond to log polling calls for this amount
+  of milliseconds, the test run is aborted. Defaults to 10 seconds.
+- `url` the URL to open in each browser. Defaults to no URL.
+- `browsers` an array of browser config objects, each with these properties:
+    - `name` the name of the browser to launch, e.g. `chrome`, `firefox` or
+      `internet explorer`
+    - `version` the browser version to launch. Use `*` for any.
+    - `url` an optional URL to launch for this browser
 
 ## Known issues and solutions
 
