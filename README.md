@@ -165,6 +165,7 @@ Loading a page before injecting the scripts is solving these issues:
 - Error: `SECURITY_ERR: DOM Exception 18` because setting cookies is not
   allowed for `file://` URLs
 - Error: `access to the Indexed Database API is denied in this context`
+- localStorage being inaccessible.
 
 ## Compatibility
 
