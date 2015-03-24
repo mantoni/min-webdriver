@@ -12,6 +12,9 @@
     "saucelabs"
   ],
   "author": "Maximilian Antoni (http://maxantoni.de)",
+  "contributors": [
+    "Dustin Wyatt <dustin.wyatt@gmail.com>"
+  ],
   "homepage": "https://github.com/mantoni/min-webdriver",
   "main": "./lib/plugin.js",
   "browser": "./lib/client.js",
