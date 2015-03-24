@@ -1,5 +1,9 @@
 # Changes
 
+## 2.3.0
+
+- Add `closeOnError` and `closeOnSuccess` options (Dustin Wyatt)
+
 ## 2.2.2
 
 - Print browser names with leading '#'

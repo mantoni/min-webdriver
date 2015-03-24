@@ -1,6 +1,6 @@
 {
   "name": "min-wd",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "Minimal WebDriver that pipes stdin to browsers",
   "keywords": [
     "webdriver",
