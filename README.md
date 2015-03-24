@@ -127,6 +127,8 @@ b.plugin(minWd, { timeout : 0 });
 - `timeout` if a script does not respond to log polling calls for this amount
   of milliseconds, the test run is aborted. Defaults to 10 seconds.
 - `url` the URL to open in each browser. Defaults to no URL.
+- `closeOnSuccess` whether to close browsers on success. Defaults to `true`.
+- `closeOnError` whether to close browsers on error. Defaults to `true`.
 - `browsers` an array of browser config objects, each with these properties:
     - `name` the name of the browser to launch, e.g. `chrome`, `firefox` or
       `internet explorer`
