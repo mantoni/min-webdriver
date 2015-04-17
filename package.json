@@ -19,7 +19,7 @@
     "min-wd": "bin/cmd.js"
   },
   "scripts": {
-    "test": "jslint --color \"**/*.js\""
+    "test": "jslint --edition=latest --color \"**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "source-mapper": "^1.0"
   },
   "devDependencies": {
-    "jslint": "^0.6"
+    "jslint": "^0.8"
   },
   "files": [
     "bin",
