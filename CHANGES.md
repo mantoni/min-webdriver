@@ -1,5 +1,9 @@
 # Changes
 
+## 2.4.0
+
+- Pipe output back to browserify instead of stdout
+
 ## 2.3.0
 
 - Add `closeOnError` and `closeOnSuccess` options (Dustin Wyatt)
