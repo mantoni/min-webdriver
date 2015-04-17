@@ -3,12 +3,9 @@
   "version": "2.3.0",
   "description": "Minimal WebDriver that pipes stdin to browsers",
   "keywords": [
+    "browserify-plugin",
     "webdriver",
-    "stdin",
-    "browser",
-    "tests",
-    "browserify",
-    "browserify-transform",
+    "selenium",
     "saucelabs"
   ],
   "author": "Maximilian Antoni (http://maxantoni.de)",
