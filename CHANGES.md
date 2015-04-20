@@ -1,5 +1,10 @@
 # Changes
 
+## 2.4.1
+
+- Start log polling more quickly
+- Write out parsed response status code in failure cases
+
 ## 2.4.0
 
 - Pipe output back to browserify instead of stdout
