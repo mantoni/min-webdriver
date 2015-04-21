@@ -1,5 +1,9 @@
 # Changes
 
+## 2.4.2
+
+- Fix `write after end` bug
+
 ## 2.4.1
 
 - Start log polling more quickly
