@@ -68,6 +68,8 @@ Enable SauceLabs in your `.min-wd` file:
 ```
 {
   "sauceLabs": true,
+  "sauceJobName" : "TEST PROJECT",
+  "BUILD_VAR" : "TRAVIS_BUILD_NUMBER",
   "browsers": [...]
 }
 ```
