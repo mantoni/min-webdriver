@@ -10,7 +10,8 @@
   ],
   "author": "Maximilian Antoni (http://maxantoni.de)",
   "contributors": [
-    "Dustin Wyatt <dustin.wyatt@gmail.com>"
+    "Dustin Wyatt <dustin.wyatt@gmail.com>",
+    "az7arul <az7arul@gmail.com>"
   ],
   "homepage": "https://github.com/mantoni/min-webdriver",
   "main": "./lib/plugin.js",
