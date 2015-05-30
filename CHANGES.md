@@ -1,5 +1,9 @@
 # Changes
 
+## 2.5.0
+
+- Update Sauce Job with passed and build attribute (az7arul)
+
 ## 2.4.2
 
 - Fix `write after end` bug
