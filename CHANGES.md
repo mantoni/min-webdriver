@@ -1,5 +1,9 @@
 # Changes
 
+## 2.5.1
+
+- Improve documentation for SauceLabs specific options
+
 ## 2.5.0
 
 - Update Sauce Job with passed and build attribute (az7arul)
