@@ -1,5 +1,9 @@
 # Changes
 
+## 2.6.0
+
+- Default `sauceJobName` to the name property in cwd `package.json`
+
 ## 2.5.1
 
 - Improve documentation for SauceLabs specific options
