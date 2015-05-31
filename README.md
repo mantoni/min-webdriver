@@ -140,7 +140,8 @@ b.plugin(minWd, { timeout : 0 });
 
 SauceLabs specific options that only apply if `sauceLabs` is set to `true`:
 
-- `sauceJobName` sets a custom name for the SauceLabs job.
+- `sauceJobName` sets a custom name for the SauceLabs job. If a `package.json`
+  file exists in the current directory, this defaults to the package name.
 - `BUILD_VAR` sets the environment variable name that contains a build number
   to set, e.g. `TRAVIS_BUILD_NUMBER`.
 
