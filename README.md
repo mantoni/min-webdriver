@@ -68,11 +68,12 @@ Enable SauceLabs in your `.min-wd` file:
 ```
 {
   "sauceLabs": true,
-  "sauceJobName" : "TEST PROJECT",
-  "BUILD_VAR" : "TRAVIS_BUILD_NUMBER",
   "browsers": [...]
 }
 ```
+
+See ["Supported options"](#supported-options) for additional SauceLabs specific
+options.
 
 ## Loading a web page
 
@@ -136,6 +137,12 @@ b.plugin(minWd, { timeout : 0 });
       `internet explorer`
     - `version` the browser version to launch. Use `*` for any.
     - `url` an optional URL to launch for this browser
+
+SauceLabs specific options that only apply if `sauceLabs` is set to `true`:
+
+- `sauceJobName` sets a custom name for the SauceLabs job.
+- `BUILD_VAR` sets the environment variable name that contains a build number
+  to set, e.g. `TRAVIS_BUILD_NUMBER`.
 
 ## Known issues and solutions
 
