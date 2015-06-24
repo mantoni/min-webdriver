@@ -32,7 +32,7 @@
     "resolve": "^1.0",
     "saucelabs": "^0.1.1",
     "source-mapper": "^1.0",
-    "through2": "^0.6"
+    "through2": "^1.1"
   },
   "devDependencies": {
     "jslint": "^0.8"
