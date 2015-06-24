@@ -1,6 +1,6 @@
 {
   "name": "min-wd",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "Minimal WebDriver that pipes stdin to browsers",
   "keywords": [
     "browserify-plugin",

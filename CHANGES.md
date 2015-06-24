@@ -1,5 +1,9 @@
 # Changes
 
+## 2.6.1
+
+- Update through2 to `^1.1`
+
 ## 2.6.0
 
 - Default `sauceJobName` to the name property in cwd `package.json`
