@@ -108,6 +108,8 @@ increase the timeout by adding a `timeout` property to your config:
 "timeout": 20000
 ```
 
+**Notice:** This option is not used if explicitly setting the `asyncPolling` option to `false`.
+
 ## API
 
 Use min-wd programatically with browserify like this:
@@ -127,6 +129,7 @@ b.plugin(minWd, { timeout : 0 });
   `true`, `ondemand.saucelabs.com` is used.
 - `port` the port to connect to. Defaults to `4444`. If `sauceLabs` is `true`,
   `80` is used.
+- `asyncPolling` whether to use async polling when looking for test results. Defaults to `true`.
 - `timeout` if a script does not respond to log polling calls for this amount
   of milliseconds, the test run is aborted. Defaults to 10 seconds.
 - `url` the URL to open in each browser. Defaults to no URL.
@@ -137,6 +140,11 @@ b.plugin(minWd, { timeout : 0 });
       `internet explorer`
     - `version` the browser version to launch. Use `*` for any.
     - `url` an optional URL to launch for this browser
+
+Some options are only considered depending on the `asyncPolling` value:
+
+  - `pollingInterval` sets the time interval between test log checks. Only apply if `asyncPolling` is `false`. Defaults to 1000 milliseconds.
+  - `timeout` option won't apply if `asyncPolling` is set to `false` because the test log is checked manually respecting `pollingInterval`.
 
 SauceLabs specific options that only apply if `sauceLabs` is set to `true`:
 
@@ -178,6 +186,12 @@ Loading a page before injecting the scripts is solving these issues:
   allowed for `file://` URLs
 - Error: `access to the Indexed Database API is denied in this context`
 - localStorage being inaccessible.
+
+#### Usage with Microsoft Edge browser
+
+For the time being, MS Edge currently doesn't support `asyncPolling` set to `true`.
+
+If you want to test with that browser you must set `asyncPolling` to `false`.
 
 ## Compatibility
 
