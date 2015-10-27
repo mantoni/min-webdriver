@@ -1,5 +1,10 @@
 # Changes
 
+## 2.7.0
+
+- Add the option to test using synchronous polling (Matheus Kautzmann)
+- Bump saucelabs version to `^1.0` (Matheus Kautzmann)
+
 ## 2.6.1
 
 - Update through2 to `^1.1`
