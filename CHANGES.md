@@ -1,5 +1,9 @@
 # Changes
 
+## 2.8.0
+
+- Streams 3: bump dependencies
+
 ## 2.7.0
 
 - Add the option to test using synchronous polling (Matheus Kautzmann)
