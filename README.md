@@ -73,7 +73,8 @@ Enable SauceLabs in your `.min-wd` file:
 ```
 
 See ["Supported options"](#supported-options) for additional SauceLabs specific
-options.
+options and ["SauceLabs on Travis"](sourcelabs-on-travis) on how to run
+min-webdriver tests on Travis.
 
 ## Loading a web page
 
@@ -108,7 +109,8 @@ increase the timeout by adding a `timeout` property to your config:
 "timeout": 20000
 ```
 
-**Notice:** This option is not used if explicitly setting the `asyncPolling` option to `false`.
+**Notice:** This option is not used if explicitly setting the `asyncPolling`
+option to `false`.
 
 ## API
 
@@ -153,6 +155,32 @@ SauceLabs specific options that only apply if `sauceLabs` is set to `true`:
 - `BUILD_VAR` sets the environment variable name that contains a build number
   to set, e.g. `TRAVIS_BUILD_NUMBER`.
 
+### SauceLabs on Travis
+
+Assuming you have your linter and headless tests in an npm "test" script and
+the SauceLabs tests in a script called "wd", then the SauceLabs builds can be
+used by configuring your `.travis.yml` like this:
+
+```
+language: node_js
+node_js:
+  - "0.12"
+  - "4.2"
+
+env:
+  global:
+    - SAUCE_USERNAME=mantoni
+    - secure: "your-secured-access-key"
+
+script:
+  - 'npm test'
+  - 'if [ "x$TRAVIS_NODE_VERSION" = "x4.2" ]; then npm run wd; fi'
+```
+
+This will run `npm test` on Node 0.12 and 4.2 while running the "wd" script
+only in the node 4.2 build.  See the Travis [documentation for encryption
+keys][TravisKeys] for details about the `secure` config.
+
 ## Known issues and solutions
 
 `min-webdriver` injects your script directly into the default page launched by
@@ -195,7 +223,7 @@ that browser you must set `asyncPolling` to `false`.
 
 ## Compatibility
 
-- Node 0.10 or later
+- Node 0.10, 0.12, 4.x, 5.x
 - Selenium Server 2.39 or later
 
 ## License
@@ -210,3 +238,4 @@ MIT
 [Mocha]: http://visionmedia.github.io/mocha/
 [Mochify]: https://github.com/mantoni/mochify.js
 [mocaccino]: https://github.com/mantoni/mocaccino.js
+[TravisKeys]: https://docs.travis-ci.com/user/encryption-keys/
