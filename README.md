@@ -189,9 +189,9 @@ Loading a page before injecting the scripts is solving these issues:
 
 #### Usage with Microsoft Edge browser
 
-For the time being, MS Edge currently doesn't support `asyncPolling` set to `true`.
-
-If you want to test with that browser you must set `asyncPolling` to `false`.
+To configure edge use `{ "name": "microsoftedge" }`. For the time being, MS
+Edge doesn't support `asyncPolling` set to `true`. If you want to test with
+that browser you must set `asyncPolling` to `false`.
 
 ## Compatibility
 
