@@ -126,6 +126,7 @@ b.plugin(minWd, { timeout : 0 });
 
 ### Supported options
 
+- `wdFile` specify the location of the `.min-wd` config file. Defaults to `.min-wd`.
 - `sauceLabs` whether to run tests with `saucelabs`. Defaults to `false`.
 - `hostname` the host to connect to. Defaults to `localhost`. If `sauceLabs` is
   `true`, `ondemand.saucelabs.com` is used.
