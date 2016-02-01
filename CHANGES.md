@@ -1,5 +1,14 @@
 # Changes
 
+## 2.9.0
+
+Moshe Kolodnya [made it possible][PR14] to use a different config file. He also
+[sent a PR][PR13] to allow the `.min-wd` file to be loaded as a node module.
+Thanks!
+
+[PR14]: https://github.com/mantoni/min-webdriver/pull/14
+[PR13]: https://github.com/mantoni/min-webdriver/pull/13
+
 ## 2.8.0
 
 - Streams 3: bump dependencies
