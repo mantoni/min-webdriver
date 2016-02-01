@@ -34,6 +34,24 @@ Put a config file name `.min-wd` in your project directory:
 }
 ```
 
+You can also have the `.min-wd` file be loaded as a module:
+
+```
+var hostname = true ? "localhost" : "otherhost";
+
+module.export = {
+  "hostname": hostname,
+  "port": 4444,
+  "browsers": [{
+    "name": "internet explorer",
+    "version": "10"
+  }, {
+    "name": "chrome"
+  }]
+}
+```
+
+
 Alternatively, add a `webdriver` property with the configs to your
 `package.json` file.
 
