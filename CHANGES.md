@@ -1,5 +1,22 @@
 # Changes
 
+## 2.9.1
+
+Running test suits or projects sometimes caused issues with Chrome. This appears
+to be an issue with a buffer size limit when executing scripts through
+`chromedriver`.
+
+With this path, scripts are no longer injected directly. Instead, a small
+receiver function is injected and the actual test code is sent to that function
+in chunks, bypassing the buffer limit. Once the script was fully received by the
+browser, it is injected with a new `<script>` tag.
+
+Related issues:
+
+- <https://github.com/mantoni/mochify.js/issues/110>
+- <https://github.com/sinonjs/sinon/issues/912>
+- <https://bugs.chromium.org/p/chromedriver/issues/detail?id=402>
+
 ## 2.9.0
 
 Moshe Kolodnya [made it possible][PR14] to use a different config file. He also
