@@ -1,5 +1,10 @@
 # Changes
 
+## 2.9.2
+
+Further decreases the buffer size introduced in `v2.9.1` to work around the
+Chrome driver issue which still occurs occasionally.
+
 ## 2.9.1
 
 Running test suits or projects sometimes caused issues with Chrome. This appears
