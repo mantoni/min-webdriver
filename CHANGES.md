@@ -1,5 +1,9 @@
 # Changes
 
+## 2.9.3
+
+Decrease buffer size even further due to Chrome issue still occurring.
+
 ## 2.9.2
 
 Further decreases the buffer size introduced in `v2.9.1` to work around the
