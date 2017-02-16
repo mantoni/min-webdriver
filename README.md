@@ -254,7 +254,7 @@ MIT
 [License]: http://img.shields.io/npm/l/min-wd.svg
 [WebDriver protocol]: https://code.google.com/p/selenium/wiki/JsonWireProtocol
 [browserify]: http://browserify.org
-[Mocha]: http://visionmedia.github.io/mocha/
+[Mocha]: http://mochajs.org/
 [Mochify]: https://github.com/mantoni/mochify.js
 [mocaccino]: https://github.com/mantoni/mocaccino.js
 [TravisKeys]: https://docs.travis-ci.com/user/encryption-keys/
