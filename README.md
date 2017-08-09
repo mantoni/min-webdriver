@@ -91,7 +91,7 @@ Enable SauceLabs in your `.min-wd` file:
 ```
 
 See ["Supported options"](#supported-options) for additional SauceLabs specific
-options and ["SauceLabs on Travis"](sourcelabs-on-travis) on how to run
+options and ["SauceLabs on Travis"](#saucelabs-on-travis) on how to run
 min-webdriver tests on Travis.
 
 ## Loading a web page
