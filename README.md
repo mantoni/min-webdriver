@@ -119,13 +119,18 @@ If this is your use case, make sure to give [Mochify][] a try.
 
 ## Timeouts
 
-The default timeout for the log polling script is 10 seconds. If you have long
-running test cases that don't print anything for more than 10 seconds, you can
-increase the timeout by adding a `timeout` property to your config:
+[Webdriver's session timeouts](https://www.w3.org/TR/webdriver/#set-timeouts)
+are configurable with the `timeouts` property:
 
+```json
+"timeouts": {
+  "script": 10000,
+  "pageLoad": 2000,
+  "implicit": 1000
+}
 ```
-"timeout": 20000
-```
+
+By default only the `script` timeout is set to 10 seconds.
 
 **Notice:** This option is not used if explicitly setting the `asyncPolling`
 option to `false`.
