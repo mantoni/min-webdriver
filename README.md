@@ -21,7 +21,7 @@ npm install min-wd
 
 Put a config file name `.min-wd` in your project directory:
 
-```
+```json
 {
   "hostname": "localhost",
   "port": 4444,
@@ -36,7 +36,7 @@ Put a config file name `.min-wd` in your project directory:
 
 You can also have the `.min-wd` file be loaded as a module:
 
-```
+```js
 var hostname = true ? "localhost" : "otherhost";
 
 module.export = {
@@ -83,7 +83,7 @@ export SAUCE_ACCESS_KEY="your-access-key"
 
 Enable SauceLabs in your `.min-wd` file:
 
-```
+```json
 {
   "sauceLabs": true,
   "browsers": [...]
@@ -101,7 +101,7 @@ straight away without loading any web page. If you want to run your test cases
 in the context of a web page, you can configure the start page in the `.min-wd`
 file:
 
-```
+```json
 {
   "url": "http://my-test-page"
 }
@@ -119,27 +119,19 @@ If this is your use case, make sure to give [Mochify][] a try.
 
 ## Timeouts
 
-[Webdriver's session timeouts](https://www.w3.org/TR/webdriver/#set-timeouts)
-are configurable with the `timeouts` property:
+The default timeout for the log polling script is 10 seconds. If you have long
+running test cases that don't print anything for more than 10 seconds, you can
+increase the timeout by adding a `timeout` property to your config:
 
 ```json
-"timeouts": {
-  "script": 10000,
-  "pageLoad": 2000,
-  "implicit": 1000
-}
+"timeout": 20000
 ```
-
-By default only the `script` timeout is set to 10 seconds.
-
-**Notice:** This option is not used if explicitly setting the `asyncPolling`
-option to `false`.
 
 ## API
 
 Use min-wd programatically with browserify like this:
 
-```
+```js
 var browserify = require('browserify');
 var minWd = require('min-wd');
 
@@ -165,12 +157,10 @@ b.plugin(minWd, { timeout : 0 });
     - `name` the name of the browser to launch, e.g. `chrome`, `firefox` or
       `internet explorer`
     - `version` the browser version to launch. Use `*` for any.
-    - `url` an optional URL to launch for this browser
-
-Some options are only considered depending on the `asyncPolling` value:
-
-  - `pollingInterval` sets the time interval between test log checks. Only apply if `asyncPolling` is `false`. Defaults to 1000 milliseconds.
-  - `timeout` option won't apply if `asyncPolling` is set to `false` because the test log is checked manually respecting `pollingInterval`.
+    - `url` an optional URL to launch for this browser.
+- `pollingInterval` sets the time interval between test log checks. Defaults
+  to 100 milliseconds when `asyncPolling = true` or 1000 milliseconds otherwise.
+- `timeout` sets the web driver's `script` and `async_script` timeouts.
 
 SauceLabs specific options that only apply if `sauceLabs` is set to `true`:
 
