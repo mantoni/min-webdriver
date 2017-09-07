@@ -159,7 +159,7 @@ b.plugin(minWd, { timeout : 0 });
     - `version` the browser version to launch. Use `*` for any.
     - `url` an optional URL to launch for this browser.
 - `pollingInterval` sets the time interval between test log checks. Defaults
-  to 100 milliseconds when `asyncPolling = true` or 1000 milliseconds otherwise.
+  to 100 milliseconds.
 - `timeout` sets the web driver's `script` and `async_script` timeouts.
 
 SauceLabs specific options that only apply if `sauceLabs` is set to `true`:
