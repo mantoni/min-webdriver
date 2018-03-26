@@ -1,5 +1,11 @@
 # Changes
 
+## 2.10.0
+
+- Support Appium with iOS Simulator
+- Fix "SauceLabs on Travis" link
+- Update Mocha link (Morton Fox)
+
 ## 2.9.3
 
 Decrease buffer size even further due to Chrome issue still occurring.
