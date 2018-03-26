@@ -22,7 +22,10 @@
     "min-wd": "bin/cmd.js"
   },
   "scripts": {
-    "test": "jslint --edition=latest --color \"**/*.js\""
+    "test": "jslint --edition=latest --color \"**/*.js\"",
+    "preversion": "npm test",
+    "version": "changes",
+    "postversion": "git push --follow-tags && npm publish"
   },
   "repository": {
     "type": "git",
@@ -37,6 +40,7 @@
     "through2": "^2.0.0"
   },
   "devDependencies": {
+    "@studio/changes": "^1.4.0",
     "jslint": "^0.8"
   },
   "files": [
