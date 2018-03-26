@@ -6,7 +6,8 @@
 
 Pipe scripts to browsers using the Selenium [WebDriver protocol][].
 
-- SauceLabs support
+- [SauceLabs][] support
+- [Appium][] support for mobile testing
 - Selenium Server 2 support
 - Concurrent test runs
 - No web server required
@@ -94,6 +95,34 @@ See ["Supported options"](#supported-options) for additional SauceLabs specific
 options and ["SauceLabs on Travis"](#saucelabs-on-travis) on how to run
 min-webdriver tests on Travis.
 
+## Appium
+
+Note: This has only be tested on Mac OS X High Sierra with the iOS Simulator so
+far. If you have successfully tested with other configurations, please file an
+issue so that we can extend the docs.
+
+Setup for iOS Simulator on Mac OS X:
+
+- `npm install -g appium`
+- `brew install carthage`
+- Configure your `.min-wd` file like this:
+
+```
+{
+  "hostname": "localhost",
+  "port": 4723,
+  "browsers": [{
+    "name": "Safari",
+    "platformName": "iOS",
+    "platformVersion": "11.2",
+    "deviceName": "iPhone Simulator"
+  }]
+}
+```
+
+- Run `appium` which should start a server on port 4723
+- Run your tests
+
 ## Loading a web page
 
 By default, min-webdriver will folk a new browser and inject the given script
@@ -150,7 +179,8 @@ b.plugin(minWd, { timeout : 0 });
   `true`, `ondemand.saucelabs.com` is used.
 - `port` the port to connect to. Defaults to `4444`. If `sauceLabs` is `true`,
   `80` is used.
-- `asyncPolling` whether to use async polling when looking for test results. Defaults to `true`.
+- `asyncPolling` whether to use async polling when looking for test results.
+  Defaults to `true`.
 - `timeout` if a script does not respond to log polling calls for this amount
   of milliseconds, the test run is aborted. Defaults to 10 seconds.
 - `url` the URL to open in each browser. Defaults to no URL.
@@ -164,8 +194,10 @@ b.plugin(minWd, { timeout : 0 });
 
 Some options are only considered depending on the `asyncPolling` value:
 
-  - `pollingInterval` sets the time interval between test log checks. Only apply if `asyncPolling` is `false`. Defaults to 1000 milliseconds.
-  - `timeout` option won't apply if `asyncPolling` is set to `false` because the test log is checked manually respecting `pollingInterval`.
+  - `pollingInterval` sets the time interval between test log checks. Only
+    apply if `asyncPolling` is `false`. Defaults to 1000 milliseconds.
+  - `timeout` option won't apply if `asyncPolling` is set to `false` because
+    the test log is checked manually respecting `pollingInterval`.
 
 SauceLabs specific options that only apply if `sauceLabs` is set to `true`:
 
@@ -233,6 +265,7 @@ Loading a page before injecting the scripts is solving these issues:
   allowed for `file://` URLs
 - Error: `access to the Indexed Database API is denied in this context`
 - localStorage being inaccessible.
+- iOS Simulator does not report anything: Set `asyncPolling: false`
 
 #### Usage with Microsoft Edge browser
 
@@ -258,3 +291,5 @@ MIT
 [Mochify]: https://github.com/mantoni/mochify.js
 [mocaccino]: https://github.com/mantoni/mocaccino.js
 [TravisKeys]: https://docs.travis-ci.com/user/encryption-keys/
+[SauceLabs]: https://saucelabs.com
+[Appium]: http://appium.io
