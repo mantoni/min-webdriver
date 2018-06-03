@@ -73,6 +73,24 @@ Hello browser!
 Hello browser!
 ```
 
+Additional Selenium capabilities and browser-specific capabilities can be
+specified with the `capabilities` property:
+
+```
+{
+  "hostname": "localhost",
+  "port": 4444,
+  "browsers": [{
+    "name": "chrome",
+    "capabilities": {
+      "chromeOptions": {
+        "args": ["--headless", "--disable-gpu"]
+      }
+    }
+  }]
+}
+```
+
 ## SauceLabs
 
 Export your SauceLabs credentials:
@@ -191,6 +209,8 @@ b.plugin(minWd, { timeout : 0 });
       `internet explorer`
     - `version` the browser version to launch. Use `*` for any.
     - `url` an optional URL to launch for this browser
+    - `capabilities` additional Selenium capabilities and browser-specific
+      capabilities
 
 Some options are only considered depending on the `asyncPolling` value:
 
