@@ -141,6 +141,32 @@ Setup for iOS Simulator on Mac OS X:
 - Run `appium` which should start a server on port 4723
 - Run your tests
 
+## BrowserStack
+
+Export your BrowserStack credentials:
+
+```
+export BROWSERSTACK_USERNAME="your-user-name"
+export BROWSERSTACK_ACCESS_KEY="your-access-key"
+```
+
+Example `.min-wd` file:
+
+```
+module.exports = {
+  "hostname": "hub-cloud.browserstack.com",
+  "port": 80,
+  "browsers": [{
+    "name": "chrome",
+    "capabilities": {
+      "browser": "Chrome",
+      "browserstack.user": process.env.BROWSERSTACK_USERNAME,
+      "browserstack.key": process.env.BROWSERSTACK_ACCESS_KEY
+    }
+  }]
+}
+```
+
 ## Loading a web page
 
 By default, min-webdriver will folk a new browser and inject the given script
