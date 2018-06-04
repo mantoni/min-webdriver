@@ -73,6 +73,24 @@ Hello browser!
 Hello browser!
 ```
 
+Additional Selenium capabilities and browser-specific capabilities can be
+specified with the `capabilities` property:
+
+```
+{
+  "hostname": "localhost",
+  "port": 4444,
+  "browsers": [{
+    "name": "chrome",
+    "capabilities": {
+      "chromeOptions": {
+        "args": ["--headless", "--disable-gpu"]
+      }
+    }
+  }]
+}
+```
+
 ## SauceLabs
 
 Export your SauceLabs credentials:
@@ -122,6 +140,32 @@ Setup for iOS Simulator on Mac OS X:
 
 - Run `appium` which should start a server on port 4723
 - Run your tests
+
+## BrowserStack
+
+Export your BrowserStack credentials:
+
+```
+export BROWSERSTACK_USERNAME="your-user-name"
+export BROWSERSTACK_ACCESS_KEY="your-access-key"
+```
+
+Example `.min-wd` file:
+
+```
+module.exports = {
+  "hostname": "hub-cloud.browserstack.com",
+  "port": 80,
+  "browsers": [{
+    "name": "chrome",
+    "capabilities": {
+      "browser": "Chrome",
+      "browserstack.user": process.env.BROWSERSTACK_USERNAME,
+      "browserstack.key": process.env.BROWSERSTACK_ACCESS_KEY
+    }
+  }]
+}
+```
 
 ## Loading a web page
 
@@ -191,6 +235,8 @@ b.plugin(minWd, { timeout : 0 });
       `internet explorer`
     - `version` the browser version to launch. Use `*` for any.
     - `url` an optional URL to launch for this browser
+    - `capabilities` additional Selenium capabilities and browser-specific
+      capabilities
 
 Some options are only considered depending on the `asyncPolling` value:
 
