@@ -40,7 +40,7 @@ You can also have the `.min-wd` file be loaded as a module:
 ```
 var hostname = true ? "localhost" : "otherhost";
 
-module.export = {
+module.exports = {
   "hostname": hostname,
   "port": 4444,
   "browsers": [{
