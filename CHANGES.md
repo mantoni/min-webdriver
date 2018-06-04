@@ -1,5 +1,13 @@
 # Changes
 
+## 2.11.0
+
+Steffen André Langnes added the ability to configure custom capabilities.
+
+- Allow custom capabilities
+- Fix example in readme for loading .min-wd file as module
+- Add BrowserStack example to readme
+
 ## 2.10.0
 
 - Support Appium with iOS Simulator
