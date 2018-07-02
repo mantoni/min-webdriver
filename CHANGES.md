@@ -1,5 +1,16 @@
 # Changes
 
+## 2.11.1
+
+- [`d9eb5d4`](https://github.com/mantoni/min-webdriver/commit/d9eb5d4cc18eb8e4b113e3a4f19a8661138d917b)
+  Improve browser title
+- [`7fb8c3c`](https://github.com/mantoni/min-webdriver/commit/7fb8c3c0b5e50c6072e7df8abe397b9b9ddd19e9)
+  Add commit links with `--commits`
+- [`32a3e02`](https://github.com/mantoni/min-webdriver/commit/32a3e02094b1c330b07b72eb76bbe6a91ffa2468)
+  Replace jslint with eslint
+- [`66bd668`](https://github.com/mantoni/min-webdriver/commit/66bd66853054f1b5f29c5b95c9862b09c0ec4402)
+  Update dependencies
+
 ## 2.11.0
 
 Steffen André Langnes added the ability to configure custom capabilities.
