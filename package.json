@@ -6,7 +6,8 @@
     "browserify-plugin",
     "webdriver",
     "selenium",
-    "saucelabs"
+    "saucelabs",
+    "browserstack"
   ],
   "author": "Maximilian Antoni (http://maxantoni.de)",
   "contributors": [
@@ -24,7 +25,7 @@
   "scripts": {
     "test": "jslint --edition=latest --color \"**/*.js\"",
     "preversion": "npm test",
-    "version": "changes",
+    "version": "changes --commits",
     "postversion": "git push --follow-tags && npm publish"
   },
   "repository": {
