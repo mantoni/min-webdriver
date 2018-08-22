@@ -1,0 +1,4 @@
+{
+  "hostname": "my.local",
+  "extends": "foo"
+}

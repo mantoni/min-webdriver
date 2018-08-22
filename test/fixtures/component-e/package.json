@@ -1,0 +1,6 @@
+{
+  "name": "component-a",
+  "devDependencies": {
+    "min-wd-config-foo": "^1.0.0"
+  }
+}
