@@ -14,7 +14,8 @@
     "Dustin Wyatt <dustin.wyatt@gmail.com>",
     "az7arul <az7arul@gmail.com>",
     "Matheus Kautzmann <kautzmann5@gmail.com>",
-    "Moshe Kolodny <kolodny.github@gmail.com>"
+    "Moshe Kolodny <kolodny.github@gmail.com>",
+    "Davide Callegari <davide@brokenseal.it>"
   ],
   "homepage": "https://github.com/mantoni/min-webdriver",
   "main": "./lib/plugin.js",
