@@ -40,7 +40,7 @@
     "through2": "^2.0.0"
   },
   "devDependencies": {
-    "@studio/changes": "^1.5.2",
+    "@studio/changes": "^1.6.1",
     "eslint": "^5.0.1"
   },
   "files": [
