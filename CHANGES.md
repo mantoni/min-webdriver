@@ -1,5 +1,16 @@
 # Changes
 
+## 2.11.2
+
+- [`7728d9f`](https://github.com/mantoni/min-webdriver/commit/7728d9f5c183e28b173af0c69c128dcec968925f)
+  Fix issue in request module invoking a callback without both an error and a response (Davide Callegari)
+- [`437bc7f`](https://github.com/mantoni/min-webdriver/commit/437bc7f4d07a919028b05428c781f131f7d2bf0e)
+  Add contributor (Maximilian Antoni)
+- [`25cf173`](https://github.com/mantoni/min-webdriver/commit/25cf173096551a3e60a685c645d4da5612d69b61)
+  Update Studio Changes (Maximilian Antoni)
+- [`aa3ea84`](https://github.com/mantoni/min-webdriver/commit/aa3ea8476b73813d35f2e12f569257dfc781b5ac)
+  Run build in node 10 (Maximilian Antoni)
+
 ## 2.11.1
 
 - [`d9eb5d4`](https://github.com/mantoni/min-webdriver/commit/d9eb5d4cc18eb8e4b113e3a4f19a8661138d917b)
