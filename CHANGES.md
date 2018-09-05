@@ -1,5 +1,22 @@
 # Changes
 
+## 2.12.0
+
+A change from Thomas Junghans now [allows to have sharable configs][pull-24].
+It works similar to sharable configs in eslint. Check out the readme for
+instructions.
+
+- [`1d5b9a2`](https://github.com/mantoni/min-webdriver/commit/1d5b9a23bb7b2effef1938b8b98a5538f87b2971)
+  feature: add shareable config support (Thomas Junghans)
+- [`a3ce836`](https://github.com/mantoni/min-webdriver/commit/a3ce836fd9550b0171f75a5ca2297de280d6649c)
+  Add contributor
+- [`df66b9d`](https://github.com/mantoni/min-webdriver/commit/df66b9d85e314c50abd91721833dfc8cfc82a2ca)
+  Update Studio Changes for `--footer` support
+
+_Released by [Maximilian Antoni](https://github.com/mantoni) on 2018-09-05._
+
+[pull-24]: https://github.com/mantoni/min-webdriver/pull/24
+
 ## 2.11.2
 
 - [`7728d9f`](https://github.com/mantoni/min-webdriver/commit/7728d9f5c183e28b173af0c69c128dcec968925f)
