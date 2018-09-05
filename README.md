@@ -91,6 +91,65 @@ specified with the `capabilities` property:
 }
 ```
 
+## Shareable configuration package
+
+Inspired by [ESLint's shareable configuration package][Eslint Shareable Config],
+there is the possibility of storing selenium and browser-specific capabilities
+in a separate npm package. This way one config can be shared amongst many npm 
+packages instead of them each having their own `.min-wd` file.
+
+### Usage
+
+Create a npm package and name it using the prefix `min-wd-config-` 
+(eg. min-wd-config-myapp).
+
+The shareable config must contain a js file that exports
+an object with the configuration or a `.min-wd` file. 
+
+Example: index.js
+```
+module.exports = {
+  "hostname": "localhost",
+  "port": 4444,
+  "browsers": [{
+    "name": "chrome"
+  }]
+}
+```
+
+In the shareable config's package.json you will need to reference the file 
+containing the config:
+
+```
+{
+  "name": "min-wd-config-myapp",
+  "version": "^1.0.0",
+  "webdriver": {
+    "extends": "./index.js"
+  }
+}
+```
+
+In the shareable config's dependent, that is the package that consumes the 
+shareable config, the config name without the `min-wd-config-` prefix needs to 
+be specified:
+
+```
+{
+  "name": "myapp",
+  "webdriver": {
+    "extends": "myapp"
+  },
+  "devDependencies": {
+    "min-wd-config-myapp": "^1.0.0"
+  }
+}
+```
+
+When using a shareable config and a `.min-wd` file, the latter will take 
+precedence.
+
+
 ## SauceLabs
 
 Export your SauceLabs credentials:
@@ -169,7 +228,7 @@ module.exports = {
 
 ## Loading a web page
 
-By default, min-webdriver will folk a new browser and inject the given script
+By default, min-webdriver will fork a new browser and inject the given script
 straight away without loading any web page. If you want to run your test cases
 in the context of a web page, you can configure the start page in the `.min-wd`
 file:
@@ -339,3 +398,4 @@ MIT
 [TravisKeys]: https://docs.travis-ci.com/user/encryption-keys/
 [SauceLabs]: https://saucelabs.com
 [Appium]: http://appium.io
+[Eslint Shareable Config]: https://eslint.org/docs/user-guide/configuring#using-a-shareable-configuration-package

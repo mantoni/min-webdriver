@@ -1,0 +1,10 @@
+{
+  "name": "component-b",
+  "main": "./index.js",
+  "webdriver": {
+    "extends": "foo"
+  },
+  "devDependencies": {
+    "min-wd-config-foo": "^1.0.0"
+  }
+}

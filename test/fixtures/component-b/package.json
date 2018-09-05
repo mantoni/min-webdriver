@@ -1,0 +1,9 @@
+{
+  "name": "component-b",
+  "webdriver": {
+    "extends": "bar"
+  },
+  "devDependencies": {
+    "min-wd-config-bar": "^1.0.0"
+  }
+}

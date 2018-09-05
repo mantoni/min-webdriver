@@ -24,7 +24,9 @@
     "min-wd": "bin/cmd.js"
   },
   "scripts": {
-    "test": "eslint .",
+    "lint": "eslint .",
+    "test": "mocha",
+    "watch": "mocha --watch",
     "preversion": "npm test",
     "version": "changes --commits",
     "postversion": "git push --follow-tags && npm publish"
@@ -36,13 +38,16 @@
   "dependencies": {
     "brout": "^1.1.0",
     "listen": "^1.0.0",
+    "resolve": "^1.8.1",
     "saucelabs": "^1.5.0",
     "source-mapper": "^2.0.0",
     "through2": "^2.0.0"
   },
   "devDependencies": {
     "@studio/changes": "^1.6.1",
-    "eslint": "^5.0.1"
+    "eslint": "^5.0.1",
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.5"
   },
   "files": [
     "bin",
