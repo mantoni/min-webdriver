@@ -15,7 +15,8 @@
     "az7arul <az7arul@gmail.com>",
     "Matheus Kautzmann <kautzmann5@gmail.com>",
     "Moshe Kolodny <kolodny.github@gmail.com>",
-    "Davide Callegari <davide@brokenseal.it>"
+    "Davide Callegari <davide@brokenseal.it>",
+    "Thomas Junghans <thomas.junghans@gmail.com>"
   ],
   "homepage": "https://github.com/mantoni/min-webdriver",
   "main": "./lib/plugin.js",
